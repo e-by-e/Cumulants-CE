@@ -43,7 +43,7 @@ The example is provided in the **example.py** file and furhter documentation the
 
 ### python example.py
 
-## Needed Python modules/libraries/bindings
+## Python modules/libraries/bindings needed 
 
 - sympy
 - scipy
