@@ -36,7 +36,7 @@ estimating numerical values of cumulants, which are then printed.
 If the checkbox **print analytic formulas** is selected the analytical formulas are also printed below the numerical values
 
 The second option is to use the provided package directly in the users code
-The example is provided in the **example.py** file and futhter documentation therein. 
+The example is provided in the **example.py** file and futhter documentation therein. This example code can be run as:
 
 ### python example.py
 
@@ -48,8 +48,6 @@ The example is provided in the **example.py** file and futhter documentation the
 - PyQt5
 
 ## Contact infomration
-
-for additional details contact
 
 - b.friman@gsi.de
 - a.rustamov@cern.ch, a.rustamov@gsi.de
