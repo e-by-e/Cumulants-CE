@@ -33,7 +33,8 @@ The cumulant order can be selected in the field **cumulant order** (the default 
 After pressing the **calculate** button the program first recalculates the partition function **z**, and uses it for 
 estimating numerical values of cumulants, which are then printed.
 
-If the checkbox **print analytic formulas** is selected the analytical formulas are also printed below the numerical values
+If the checkbox **print analytic formulas** is selected the analytical formulas are also printed below the numerical values.
+If the checkbox **Generate .cc file** is selected the dedicated  **C++** code  **ce_cumulants.cc** is created, which contains functions to calculate the cumulants.
 
 The second option is to use the provided package directly in the users code
 The example is provided in the **example.py** file and futhter documentation therein. This example code can be run as:
