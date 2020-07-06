@@ -26,7 +26,7 @@ class Cumulants:
         self.k = symbols('k', integer=True)
         self.B = symbols('B', integer=True)
         self.p, self.pb, self.NBc, self.NBbc, self.z, self.t, self.u, self.y = symbols(
-            'p, pb, NBc, NBbc, z, t, u, y')
+            'pB, pBar, NB, NBar, z, t, u, y')
         self.c = {}
         self.cb = {}
         self.kminus = []

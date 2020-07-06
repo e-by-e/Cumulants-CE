@@ -146,7 +146,7 @@ class CeGUI(object):
                 self.textBrowser.append("kappa_" + str(i+1) + "  = " + str(kappax_formulas[i]).replace("std::","") + "\n")
         if self.checkBox_2.checkState():
             for i in range(0, nc):
-                outF.write(f'double kappa{i+1}(double NBc, double NBbc, double z, double p, double pb) \n{"{"} '
+                outF.write(f'double kappa{i+1}(double NB, double NBar, double z, double pB, double pBar) \n{"{"} '
                            f'\n      double k{i+1} = '
                            f'{str(kappax_formulas[i])}; \n      {"return"} k{i+1}; \n{"}"}')
                 outF.write("\n")
