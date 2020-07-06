@@ -23,7 +23,7 @@ CE.process(n)
 cumNumerical = CE.get_num_values()  # numerical values
 cumAnalytic = CE.get_formulas()   # analytic formulas
 
-z = CE.get_recalculatedz()  # recalculated value of the partition function
+z = CE.get_recalculatedz()  # the canonical single-particle partition function
 
 print(f'\nrecalculated z = {z[0]:.6}\n')
 
