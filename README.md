@@ -10,8 +10,7 @@ Bengt Friman, Anar Rustamov
 - ### *Peter Braun-Munzinger, Bengt Friman, Krzysztof Redlich, Anar Rustamov, Johanna Stachel*
        Relativistic nuclear collisions: Establishing the non-critical baseline for fluctuation measurements
 
-### *Citation of the above publication is mandatory for the results obtained with this* 
-### *package and/or for developments based on this package*
+### If you use the code to produce results for a publication, we ask you to be fair and cite the above paper.
 
 ## Users guide
 The fast and efficiant way of running the program is to use the provided graphical interface
