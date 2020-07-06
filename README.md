@@ -11,7 +11,7 @@ Bengt Friman, Anar Rustamov
        Relativistic nuclear collisions: Establishing the non-critical baseline for fluctuation measurements.
 
 ### *If you use the code to produce results for a publication,* 
-### *we ask you to be fair and cite the above paper.*
+### *we ask you to be fair and cite the above paper!*
 
 ## Users guide
 A fast and efficient way to run the code, is to use the graphical interface,
@@ -19,7 +19,7 @@ which is started with the command:
 
 ### python example_GUI.py
 
-After this a Graphical User Interface is opened.
+Subsequently a Graphical User Interface is opened.
 
 The user should provide the following input information:
 
@@ -35,8 +35,8 @@ After pressing the **calculate** button the program first recalculates the parti
 computing the numerical values of the cumulants, which are then printed.
 
 If the checkbox **print analytic formulas** is selected the analytical formulas are also printed below the numerical values.
-If the checkbox **Generate .cc file** is selected, a dedicated  **C++** code  **ce_cumulants.cc** is created, which contains 
-functions for computing the cumulants.
+If the checkbox **Generate .cc file** is selected, a dedicated  **C++** code  **ce_cumulants.cc**, which contains 
+functions for computing the cumulants, is created and saved.
 
 The second option is to implement the provided package directly in your own code.
 The example is provided in the **example.py** file and furhter documentation therein. This example code can be run as:
