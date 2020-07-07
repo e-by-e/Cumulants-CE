@@ -35,7 +35,7 @@ cumAnalytic = CE.get_formulas()   # analytic formulas
 
 z = CE.get_recalculatedz()  # the canonical single-particle partition function
 
-print(f'\nrecalculated z = {z[0]:.6}\n')
+print(f'\nrecalculated z = {z:.6}\n')
 
 print("Numerical values of cumulants ____\n")
 for i in range(0, n):

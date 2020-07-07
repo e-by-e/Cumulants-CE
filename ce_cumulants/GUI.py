@@ -142,7 +142,7 @@ class CeGUI(object):
             outF = open("ce_cumulants.cc", "w")
         for i in range(0, nc):
             outstring.extend(['{:.6}'.format(float(kappax_num[i]))])
-        zr0 = '{:.10}'.format(float(zr[0]))
+        zr0 = '{:.10}'.format(float(zr))
         self.textBrowser_4.append("z = " + str(zr0))
         #self.textBrowser_4.setStyleSheet("background-color: green;")
         self.textBrowser_4.repaint()

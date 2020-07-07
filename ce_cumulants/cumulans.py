@@ -186,10 +186,10 @@ class Cumulants:
             return L
 
         zx0 = np.sqrt(NBx * NBbx)
-        zx = optimize.fsolve(func, zx0)
+        zx = np.asscalar(optimize.fsolve(func, zx0))
         self.zr = zx
-        NBcx = candensb(zx, Bx)
-        NBbcx = candensab(zx, Bx)
+        NBcx = np.asscalar(candensb(zx, Bx))
+        NBbcx = np.asscalar(candensab(zx, Bx))
         px, pbx = self.px, self.pbx
         kappax_num = {}
         for i in range(0, nc):
