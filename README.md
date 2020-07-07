@@ -46,6 +46,7 @@ The example is provided in the **example.py** file and furhter documentation the
 
 ## Python modules/libraries/bindings needed 
 
+- python version >= 3.6
 - sympy
 - scipy
 - numpy
