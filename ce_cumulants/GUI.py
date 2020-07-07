@@ -33,7 +33,8 @@ class CeGUI(object):
         self.textBrowser_2.setObjectName("textBrowser_2")
 
         self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(10, 556, 241, 16))
+        #self.label.setGeometry(QtCore.QRect(10, 556, 241, 16))
+        self.label.setGeometry(QtCore.QRect(10, 556, 800, 16))
         self.label.setObjectName("label")
 
         self.pushButton = QtWidgets.QPushButton(self.centralwidget)
@@ -172,7 +173,7 @@ class CeGUI(object):
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'.AppleSystemUIFont\'; font-size:13pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; font-weight:600; color:#ad1b20;\">Cumulants in the canonical thermodynamics</span></p></body></html>"))
-        self.label.setText(_translate("MainWindow", "Authors: B. Friman, A. Rustamov"))
+        self.label.setText(_translate("MainWindow", "Authors: B. Friman, A. Rustamov                                                                                                      Based on: arXiv:2007.02463 [nucl-th]"))
         self.label_7.setText(_translate("MainWindow", "Recalculated value of z"))
         self.pushButton.setText(_translate("MainWindow", "calculate"))
         self.label_2.setText(_translate("MainWindow", "NB :"))
