@@ -166,7 +166,7 @@ class Cumulants:
                       + 2 * z ** 6 / ((Ba + 1) ** 3 * (Ba + 2) * (Ba + 3))
                       - (11 + 5 * Ba) * z ** 8 / ((Ba + 1) ** 4 * (Ba + 2) ** 2 * (Ba + 3) * (Ba + 4))
                       + 2 * (19 + 7 * Ba) * z ** 10 / ((Ba + 1) ** 5 * (Ba + 2) ** 2 * (Ba + 3) * (Ba + 4) * (Ba + 5)))
-                return bd
+                return np.array([bd])
             bd = z * special.ive(B - 1, 2 * z) / special.ive(B, 2 * z)
             return bd
 
@@ -177,7 +177,7 @@ class Cumulants:
                        + 2 * z ** 6 / ((Ba + 1) ** 3 * (Ba + 2) * (Ba + 3))
                        - (11 + 5 * Ba) * z ** 8 / ((Ba + 1) ** 4 * (Ba + 2) ** 2 * (Ba + 3) * (Ba + 4))
                        + 2 * (19 + 7 * Ba) * z ** 10 / ((Ba + 1) ** 5 * (Ba + 2) ** 2 * (Ba + 3) * (Ba + 4) * (Ba + 5)))
-                return abd
+                return np.array([abd])
             abd = z * special.ive(B + 1, 2 * z) / special.ive(B, 2 * z)
             return abd
 
