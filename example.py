@@ -39,8 +39,12 @@ print(f'\nrecalculated z = {z:.6}\n')
 
 print("Numerical values of cumulants ____\n")
 for i in range(0, n):
-    print(f'kappa_{i} = {cumNumerical[i]:.6}')
+    print(f'kappa_{i+1} = {cumNumerical[i]:.6}')
 
 print("\nAnalytic formulas of cumulants ____\n")
 for i in range(0, n):
-    print(f'kappa_{i} = {cumAnalytic[i]}')
+    print(f'kappa_{i+1} = {cumAnalytic[i]}\n')
+
+
+# create the c++ code
+CE.create_cpp_file("cumulants.cc")

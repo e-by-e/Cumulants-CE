@@ -208,5 +208,15 @@ class Cumulants:
             kappaxcc[i] = cxxcode(self.kappax[i])
         return kappaxcc
 
+    def create_cpp_file(self, filename="cumulants.cc"):
+        outf = open(filename, "w")
+        for i in range(0, self.nc):
+            outf.write(f'double kappa{i + 1}(double NB, double NBar, double z, double pB, double pBar) \n{"{"} '
+                       f'\n      double k{i + 1} = '
+                       f'{str(cxxcode(self.kappax[i]))}; \n      {"return"} k{i + 1}; \n{"}"}')
+            outf.write("\n")
+            outf.write("\n")
+        outf.close()
+
     def get_recalculatedz(self):
         return self.zr

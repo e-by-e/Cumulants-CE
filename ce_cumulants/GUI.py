@@ -90,7 +90,7 @@ class CeGUI(object):
         self.label_6.setObjectName("label_6")
 
         self.label_7 = QtWidgets.QLabel(self.centralwidget)
-        self.label_7.setGeometry(QtCore.QRect(31, 229, 151, 16))
+        self.label_7.setGeometry(QtCore.QRect(31, 229, 161, 16))
         self.label_7.setObjectName("label_7")
 
         self.textBrowser_3 = QtWidgets.QTextBrowser(self.centralwidget)
@@ -102,12 +102,12 @@ class CeGUI(object):
         self.textBrowser_4.setObjectName("textBrowser_4")
 
         self.checkBox = QtWidgets.QCheckBox(self.centralwidget)
-        self.checkBox.setGeometry(QtCore.QRect(250, 110, 161, 20))
+        self.checkBox.setGeometry(QtCore.QRect(250, 110, 175, 20))
         self.checkBox.setObjectName("checkBox")
         self.checkBox.setText("print analytic formulas")
 
         self.checkBox_2 = QtWidgets.QCheckBox(self.centralwidget)
-        self.checkBox_2.setGeometry(QtCore.QRect(250, 136, 121, 20))
+        self.checkBox_2.setGeometry(QtCore.QRect(250, 136, 131, 20))
         self.checkBox_2.setObjectName("checkBox_2")
         self.checkBox_2.setText("Generate .cc file")
 
@@ -139,8 +139,6 @@ class CeGUI(object):
         kappax_formulas = a.get_formulas()
         zr = a.get_recalculatedz()
         outstring = []
-        if self.checkBox_2.checkState():
-            outF = open("ce_cumulants.cc", "w")
         for i in range(0, nc):
             outstring.extend(['{:.6}'.format(float(kappax_num[i]))])
         zr0 = '{:.10}'.format(float(zr))
@@ -156,13 +154,7 @@ class CeGUI(object):
             for i in range(0, nc):
                 self.textBrowser.append("kappa_" + str(i+1) + "  = " + str(kappax_formulas[i]).replace("std::","") + "\n")
         if self.checkBox_2.checkState():
-            for i in range(0, nc):
-                outF.write(f'double kappa{i+1}(double NB, double NBar, double z, double pB, double pBar) \n{"{"} '
-                           f'\n      double k{i+1} = '
-                           f'{str(kappax_formulas[i])}; \n      {"return"} k{i+1}; \n{"}"}')
-                outF.write("\n")
-                outF.write("\n")
-            outF.close()
+            a.create_cpp_file("ce_cumulants.cc")
         self.textBrowser.repaint()
 
     def retranslateUi(self, MainWindow):
@@ -173,7 +165,8 @@ class CeGUI(object):
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'.AppleSystemUIFont\'; font-size:13pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; font-weight:600; color:#ad1b20;\">Cumulants in canonical thermodynamics</span></p></body></html>"))
-        self.label.setText(_translate("MainWindow", "Authors: B. Friman, A. Rustamov                                                                                                  Based on: arXiv:2007.02463 [nucl-th]"))
+        self.label.setText(_translate("MainWindow", "Authors: B. Friman, A. Rustamov"))
+        #self.labelref.setText(_translate("MainWindow", "Based on: arXiv:2007.02463 [nucl-th]"))
         self.label_7.setText(_translate("MainWindow", "Recalculated value of z"))
         self.pushButton.setText(_translate("MainWindow", "calculate"))
         self.label_2.setText(_translate("MainWindow", "NB :"))

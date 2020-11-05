@@ -12,11 +12,12 @@ If you use the code to produce results for a publication, we ask you to be fair 
 
 """
 
-#from ce_cumulants.cumulans import Cumulants
 from ce_cumulants.GUI import CeGUI
-# creating the object od Cumulant
 from PyQt5 import QtCore, QtGui, QtWidgets
 import sys
+import os
+
+os.environ["QT_ENABLE_HIGHDPI_SCALING"] = "1"
 
 app = QtWidgets.QApplication(sys.argv)
 MainWindow = QtWidgets.QMainWindow()
